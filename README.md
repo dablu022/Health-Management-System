@@ -174,7 +174,7 @@ cd Health-Management-System
 
 **Dablu**  
 *Full Stack Developer & DBMS Enthusiast*  
-[GitHub](https://github.com/dablu022) | [LinkedIn](https://linkedin.com/in/your-profile)
+[GitHub](https://github.com/dablu022) 
 
 ---
 
