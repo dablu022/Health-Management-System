@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Health System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Health Management System</h1>
+    <p class="subtitle">Simple patient and appointment dashboard</p>
+
+    <section class="card">
+        <h2>Add Patient</h2>
+        <div class="form-grid">
+            <input id="name" placeholder="Full Name">
+            <input id="age" type="number" min="0" max="120" placeholder="Age">
+            <select id="gender">
+                <option value="">Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+            <input id="phone" type="tel" placeholder="Phone Number">
+            <input id="address" placeholder="Address">
+        </div>
+        <div class="actions">
+            <button class="primary" onclick="addPatient()">Add Patient</button>
+            <button class="secondary" onclick="clearForm()">Clear Form</button>
+            <button class="ghost" onclick="refreshAll()">Refresh All</button>
+        </div>
+        <div id="status" class="status">Ready</div>
+    </section>
+
+    <section class="card">
+        <div class="section-head">
+            <h2>Patients</h2>
+            <button class="secondary" onclick="loadPatients()">Reload</button>
+        </div>
+        <input id="searchPatient" placeholder="Search patient by name..." oninput="filterPatients()">
+        <ul id="patients" class="list"></ul>
+    </section>
+
+    <section class="card">
+        <div class="section-head">
+            <h2>Appointments</h2>
+            <button class="secondary" onclick="loadAppointments()">Reload</button>
+        </div>
+        <div class="form-grid">
+            <select id="appointmentPatient"></select>
+            <select id="appointmentDoctor"></select>
+            <input id="appointmentDate" type="datetime-local">
+        </div>
+        <div class="actions">
+            <button class="primary" onclick="bookAppointment()">Book Appointment</button>
+            <button class="ghost" onclick="clearAppointmentForm()">Clear</button>
+        </div>
+        <ul id="appointments" class="list"></ul>
+    </section>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
